@@ -8,7 +8,7 @@ function onload()
     line4 = document.createElement('span');
 
     var s = document.getElementById("Num_Years");
-    for (i = 0; i <= 100; i++)
+    for (i = 1; i <= 100; i++)
     {
         o  = document.createElement("option");
         o.innerHTML = i;
@@ -19,7 +19,7 @@ function onload()
 function compute()
 {
     var fset =  document.getElementById("field");
-    p = document.getElementById("principal").value;
+    var p = document.getElementById("principal").value;
     // validataion
     if(p <= 0 || p == undefined || p == null || p.length == 0)
     {
@@ -27,11 +27,11 @@ function compute()
         alert("Enter Positive Number");
         return;
     }
-    r = document.getElementById("Rate_Range").value;
-    n = document.getElementById("Num_Years").value;
+    var r = document.getElementById("Rate_Range").value;
+    var n = document.getElementById("Num_Years").value;
     intrest = p* (r / 100) * n;
     var d = new Date();
-    m = d.getFullYear() + parseInt(n);
+    var m = d.getFullYear() + parseInt(n);
 
     if(!append)
     {
@@ -45,10 +45,10 @@ function compute()
         fset.appendChild(document.createElement('br'));
         append = true;
     }
-    line1.innerHTML = "If you Deposit " + p + ',';
-    line2.innerHTML = "At an Interest Rate of " + r + '%.';
-    line3.innerHTML = " you will receive an amount of " + Number(intrest).toFixed(2) + ',';
-    line4.innerHTML = "in the Year " +  m + '.';
+    line1.innerHTML = "If you Deposit <mark>" + p + '</mark>,';
+    line2.innerHTML = "At an Interest Rate of <mark>" + r + '%.</mark>';
+    line3.innerHTML = " you will receive an amount of <mark>" + Number(intrest).toFixed(2) + '</mark>,';
+    line4.innerHTML = "in the Year <mark>" +  m + '</mark>.';
 }
 
 function show_value(x)
