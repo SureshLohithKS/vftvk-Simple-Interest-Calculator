@@ -20,6 +20,13 @@ function compute()
 {
     var fset =  document.getElementById("field");
     p = document.getElementById("principal").value;
+    // validataion
+    if(p < 0 || p == undefined || p == null || p.length == 0)
+    {
+        
+        alert("Invalid Principle");
+        return;
+    }
     r = document.getElementById("Rate_Range").value;
     n = document.getElementById("Num_Years").value;
     a = p *(1 +((r / 100) * n));
@@ -47,4 +54,4 @@ function compute()
 function show_value(x)
 {
  document.getElementById("Rate_View").innerHTML= x + '%';
-}   
+}
