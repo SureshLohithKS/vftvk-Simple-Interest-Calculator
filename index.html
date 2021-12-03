@@ -3,14 +3,17 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+    <body onload = "onload()">
+        <fieldset style = "width:500px; margin: 20px; padding: 0 10px 10px; border: 1px solid #666; border-radius: 25px; box-shadow: 0 0 10px #666; padding-top: 10px;" id = "field_out">
+            <h1>Simple Interest Calculator</h1>
+            <fieldset style = "border: none; padding: 0 90px 0", id = "field">
+                Amount <input required = "true" type="number" name id="principal" style = "margin: 0 37px; font-weight: bold;">  <br/><br/>
+                Interest Rate <input type="range" min="0" max="10" value="00" step = "0.5" class="slider" id="Rate_Range" 
+                style = "margin: 0 10px;"onchange="show_value(this.value)" oninput = "show_value(this.value)">
+                <span id="Rate_View" value == "0.0%" ></span></br><br/>
+                No. of Years <select id = "Num_Years" style = "margin: 0 10px;"> </select></br><br/>
+            <button onclick="compute()">Compute Interest</button></br><br/>
+        </fieldset>
+    <img src = "copyright.png" style = "width: 154px;height: 30px;"> 
     </body>
 </html>
