@@ -29,7 +29,7 @@ function compute()
     }
     r = document.getElementById("Rate_Range").value;
     n = document.getElementById("Num_Years").value;
-    a = p *(1 +((r / 100) * n));
+    intrest = p* (r / 100) * n;
     var d = new Date();
     m = d.getFullYear() + parseInt(n);
 
@@ -47,7 +47,7 @@ function compute()
     }
     line1.innerHTML = "If you Deposit " + p + ',';
     line2.innerHTML = "At an Interest Rate of " + r + '%.';
-    line3.innerHTML = " you will receive an amount of " + Number(a).toFixed(2) + ',';
+    line3.innerHTML = " you will receive an amount of " + Number(intrest).toFixed(2) + ',';
     line4.innerHTML = "in the Year " +  m + '.';
 }
 
