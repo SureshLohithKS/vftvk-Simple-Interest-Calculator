@@ -47,8 +47,8 @@ function compute()
         append = true;
     }
     line1.innerHTML = "If you Deposit <mark>" + p + '</mark>,';
-    line2.innerHTML = "At an Interest Rate of <mark>" + r + '%.</mark>';
-    line3.innerHTML = " you will receive an amount of <mark>" + Number(intrest).toFixed(2) + '</mark>,';
+    line2.innerHTML = "at an Interest Rate of <mark>" + r + '%.</mark>';
+    line3.innerHTML = "You will receive an amount of <mark>" + Number(intrest).toFixed(2) + '</mark>,';
     line4.innerHTML = "in the Year <mark>" +  m + '</mark>.';
 }
 
