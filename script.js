@@ -21,10 +21,10 @@ function compute()
     var fset =  document.getElementById("field");
     p = document.getElementById("principal").value;
     // validataion
-    if(p < 0 || p == undefined || p == null || p.length == 0)
+    if(p <= 0 || p == undefined || p == null || p.length == 0)
     {
         
-        alert("Invalid Principle");
+        alert("Enter Positive Number");
         return;
     }
     r = document.getElementById("Rate_Range").value;
