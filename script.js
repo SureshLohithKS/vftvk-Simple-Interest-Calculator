@@ -2,7 +2,7 @@ var append = false;
 function onload()
 {
     document.title = "Web App - Simple Interest Calculator";
-    document.getElementById("Rate_View").innerHTML= "0.0%";
+    document.getElementById("Rate_View").innerHTML= "1.0%";
     line1 = document.createElement('span');
     line2 = document.createElement('span');
     line3 = document.createElement('span');
