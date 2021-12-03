@@ -39,7 +39,7 @@ function compute()
         append = true;
     }
     line1.innerHTML = "If you Deposit " + p + ',';
-    line2.innerHTML = "At an Interest Rate of " + r + '%.';
+    line2.innerHTML = "At an Interest Rate of " + r + '%. ';
     line3.innerHTML = " you will receive an amount of " + Number(a).toFixed(2) + ',';
     line4.innerHTML = "in the Year " +  m + '.';
 }
